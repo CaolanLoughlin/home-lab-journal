@@ -1,10 +1,10 @@
 ## [06.10.2026] — Get Windows 11 VM and Ubuntu VM running in VirtualBox on new PC
 
-**Goal:** Get Windows 11 VM running in VirtualBox.
+**Goal:** Get Windows 11 and Ubuntu VM running in VirtualBox.
 **What happened:** VM showed an "abandoned" error and failed to load.
 **Diagnosis:** Rebooted the PC (no change) → rebuilt the VM from 
 scratch to rule out a setup error (no change) → investigated further 
-and found virtualization (Intel VT-x/AMD-V) was disabled in BIOS.
+and found virtualization (AMD-V) was disabled in BIOS.
 **Fix:** Enabled virtualization in BIOS settings.
 **Takeaway:** Ruling out the simple explanations first, in order, is what 
 actually narrows down a root cause — even when the first couple of 
