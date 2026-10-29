@@ -1,3 +1,21 @@
+## [26.10.2026] — Fixing Windows 11 Install Failure: TPM 2.0 & Secure Boot
+
+**Goal:** Get Windows 11 Pro installed on my new desktop (and update the
+BIOS so I could run a game that required it).
+**What happened:** Windows 11 would not install. The system wasn't meeting
+the requirements, and the BIOS update file couldn't be read from my USB stick.
+**Diagnosis:** Windows 11 requires TPM 2.0 and Secure Boot, and both were
+disabled in the BIOS. Separately, the BIOS couldn't read the update file
+because the USB wasn't formatted in a file system it supports.
+**Fix:** Enabled TPM 2.0 and Secure Boot in the BIOS settings. Reformatted
+the USB to FAT32 (following an online guide), loaded the BIOS update from it,
+and completed the update. Windows 11 Pro then installed successfully.
+**Takeaway:** Hardware-level settings (TPM, Secure Boot, firmware version)
+can block software installs, and a USB stick's file system matters for
+firmware updates. Worth checking before assuming the OS or installer is at fault.
+
+---
+
 ## [06.10.2026] — Get Windows 11 VM and Ubuntu VM running in VirtualBox on new PC
 
 **Goal:** Get Windows 11 and Ubuntu VM running in VirtualBox.
